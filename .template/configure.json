@@ -1,0 +1,4 @@
+{
+    "input": "/.template/template.omp.json",
+    "output": "/{{theme}}-{{plt}}.omp.json"
+}
