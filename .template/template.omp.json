@@ -1,21 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "1st": "{{prim}}",
-    "1sts": "{{prims}}",
-    "2nd": "{{seco}}",
-    "3rd": "{{tert}}",
-    "closer": "p:blue",
-    "os": "p:3rd",
-    "tag": "p:3rd",
-    "timer": "p:white",
-    "type": "p:1st",
-    "cyan": "lightCyan",
-    "blue": "lightBlue",
-    "red": "lightRed",
-    "reds": "red",
-    "white": "lightWhite",
-    "yellow": "lightYellow"
+    "1st": "{{primary}}",
+    "2nd": "{{secondary}}",
+    "3rd": "{{tertiary}}",
+    "com": "{{outline}}",
+    "hl": "{{info}}",
+    "inf": "{{info}}",
+    "suc": "{{success}}",
+    "err": "{{error}}"
+    {{=<% %>=}}
   },
   "blocks": [
     {
@@ -27,7 +21,7 @@
             "cache_duration": "none"
           },
           "template": "[{{ .Icon }}] ",
-          "foreground": "p:os",
+          "foreground": "p:hl",
           "type": "os",
           "style": "plain"
         },
@@ -36,18 +30,8 @@
             "cache_duration": "none"
           },
           "template": "{{ .UserName }}<p:1st>@{{ .HostName }}</>",
-          "foreground": "p:2nd",
+          "foreground": "p:3rd",
           "type": "session",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "home_enabled": true
-          },
-          "template": "[<p:type>\ue235{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ end }}</>]",
-          "foreground": "p:tag",
-          "type": "python",
           "style": "plain"
         },
         {
@@ -64,9 +48,19 @@
             "revert_icon": "\uf0e2",
             "tag_icon": "\uf412"
           },
-          "template": "[<p:type>{{ .HEAD }}</>]",
-          "foreground": "p:tag",
+          "template": "[<p:1st>{{ .HEAD }}</>]",
+          "foreground": "p:hl",
           "type": "git",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "home_enabled": true
+          },
+          "template": "[<p:1st>\ue235{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ end }}</>]",
+          "foreground": "p:hl",
+          "type": "python",
           "style": "plain"
         },
         {
@@ -77,7 +71,7 @@
             "style": "agnoster_short"
           },
           "template": " {{ .Path }} ",
-          "foreground": "p:1sts",
+          "foreground": "p:3rd",
           "type": "path",
           "style": "plain"
         },
@@ -86,7 +80,7 @@
             "cache_duration": "none"
           },
           "template": "\uf105",
-          "foreground": "p:closer",
+          "foreground": "p:inf",
           "type": "text",
           "style": "plain"
         }

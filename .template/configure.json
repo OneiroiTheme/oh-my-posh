@@ -1,4 +1,21 @@
 {
-    "input": "/.template/template.omp.json",
-    "output": "/{{theme}}-{{plt}}.omp.json"
+    "templates": {
+        "type": "mustache",
+        "input": "/.template/template.omp.json",
+        "output": "/{{plt.theme}}-{{plt.plt}}.omp.json"
+    },
+    "port": {
+        "title": "Oh My Posh",
+        "url": "https://ohmyposh.dev",
+        "version": "0.0.2"
+    },
+    "author": {
+        "name": "Crystar Z",
+        "email": "crystar.z@outlook.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OneiroiTheme/oh-my-posh.git"
+    },
+    "license": "MIT"
 }
